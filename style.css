@@ -1,0 +1,1128 @@
+body {
+      background-color: whitesmoke;
+}
+
+#header {
+         display: flex;
+         height: 120px;
+         border: 2px solid black;
+         background-color: white;
+         position: sticky;
+         top: 0;
+         left: 0;
+}
+
+.header_logo {
+              background-position: center;
+              background-size: cover;
+              margin-left: 10px;
+}
+
+/*.navbar {
+         display: inline;
+}
+
+.navbar ul {
+            padding-top: 30px;            
+}
+
+.navbar li {
+     display: inline;
+     margin: 18px;
+     font-size: 30px;
+     color: black;
+     text-align: center;
+     text-transform: uppercase;
+     font-family: serif;
+     transition: 0.3s ease;
+     align-items: center;
+     justify-content: center;
+}*/
+
+.navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #0e0c0c;
+      padding: 10px 20px;
+    }
+    
+    .nav-links {
+      display: flex;
+      list-style: none;
+      font-size: 30px;
+    }
+    
+    .nav-links li {
+      margin: 0 px;
+      padding-top: 2px;
+      padding-left: 37px;
+      font-size: 30px;
+      padding-top: 19px;
+    }
+    
+    .nav-links a {
+      color: rgb(26, 21, 21);
+      text-decoration: none;
+      font-size: 30px;
+      padding: 20px;
+      padding-top: 19px;
+      padding-left: 47;
+    }
+    
+    .nav-links a:hover {
+      background-color: #d6cfcf;
+      border-radius: 4px;
+    }
+    
+    /* Hamburger menu (hidden on desktop) */
+    .hamburger {
+      display: none;
+      font-size: 35px;
+      color: rgb(36, 25, 25);
+      cursor: pointer;
+      padding-left: 50px;
+      padding-top: 28px;
+    }
+    
+    /* Media Query for responsiveness */
+    @media (max-width: 770px) {
+      .nav-links {
+        display: none;
+        width: 200%;
+        text-align: center;
+        background-color: #e7d7d7;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        padding: 10px 0;
+      }
+    
+      .nav-links.active {
+        display: block;
+        width: 100%;
+      }
+    
+      .nav-links li {
+        margin: 10px 0;
+      }
+    
+      .hamburger {
+        display: block;
+      }
+}
+
+.banner {
+      background-image:url(https://www.bobswatches.com/rolex-blog/wp-content/uploads/2023/01/20JM2596-Edit-1-1024x682.jpg);
+      height: 690px;
+      width: 1298px;
+      padding-left: 10px;
+      background-position: center;
+      background-size: cover;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 5px;
+      border: 2px solid black;
+}
+
+.banner h4 {
+             padding-top: 30px;
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             font-size: xx-large;
+}
+
+.banner h3 {
+            font-family: cursive;
+            padding-bottom: none;
+            color: green;
+            font-size: 35px;
+}
+
+.banner p {
+           font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           font-size: large;
+}
+
+.banner button { 
+                font-size: x-large;
+                background-color: pink;
+                color: black;
+                border-radius: 15px ;
+}
+
+/* Media Query for responsiveness */
+@media (max-width:1300px) {
+.banner {
+         height: 700px;
+         padding: 1% 90% 1% 1%;
+         background-position: top 30% right 30%;
+         width: 50%;
+}
+.banner h3 , h4 {
+                    display: none;
+}
+.banner button {
+                margin-top: 350px;
+                background-color: rgb(224, 129, 148);
+                margin-left: 10px;
+                border: 2px solid black;
+                font-size: 30px;
+}
+.banner p {
+           font-size: xx-large;
+           line-height: normal;
+           line-break: none;
+}
+
+.header {
+         position: sticky;
+         top: 0;
+         left: 0;
+}
+.feature {
+          justify-content: center;
+          margin-left: 50px;
+}
+.feature .fe-box {
+                  margin: 15px 15px;
+}
+.product1 .pro-container {
+                          justify-content: center;
+}
+.poster {
+          height: 93%;
+}
+.product2 .pro-container {
+                          justify-content: center;
+}
+.colinstall {
+             padding-left: 10px;
+}
+.newsletter {
+             height: 120%;
+}
+
+/* Single Product*/
+.prodetails {
+             display: flex;
+             flex-direction: column;
+             letter-spacing: normal;
+             line-height: normal;
+             left: 200px;
+}
+
+.about-head .section-p1 { 
+      display: flex;
+      flex-direction: column;
+}
+
+.about-app img {
+                width: 94%;
+                  
+}
+}
+
+.feature {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          flex-wrap: wrap;
+}
+
+
+.feature .fe-box {
+                  width: 165px;
+                  height: 230px;
+                  border: 2px solid black;
+                  border-radius: 15px;
+                  text-align: center;
+                  margin-left: 50px;
+                  margin: 10px;
+                  text-transform: capitalize;
+                  padding-bottom: none;
+                  color: black;
+                  font-size: large;
+                  font-family: 'Times New Roman', Times, serif;
+}
+
+.feature .fe-box h3 {
+                     display: inline-block;
+                     padding: 5px;
+                     line-height: normal;
+                     border-radius: 10px;
+                     color: plum;
+                     background-color: rgb(31, 28, 28);
+                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                     font-size: larger;
+                     
+}
+
+.feature .fe-box:nth-child(2) h3 {
+                                  background-color: black;
+                                  color: rgb(137, 129, 192);
+}
+
+.feature .fe-box:nth-child(3) h3 {
+                                   background-color: black;
+                                   color: yellowgreen;
+}
+
+.feature .fe-box:nth-child(4) h3 {
+                                  background-color: black;
+                                  color: rgb(235, 159, 131);
+}
+
+.feature .fe-box:nth-child(5) h3 {
+                                  background-color: black;
+                                  color: rgb(238, 238, 161);
+}
+
+.feature .fe-box:nth-child(6) h3 {
+      background-color: black;
+      color: rgb(247, 128, 128);
+}
+
+.product1 {
+            text-align: center;
+            font-size: xx-large;
+}
+
+.product1 .pro-container {
+                          display: inline-block;
+                          justify-content: space-between;
+                          flex-wrap: wrap;
+}
+
+.product1 .pro {
+                width: 200px;
+                height: 440px;
+                padding: 10px;
+                border: 2px solid black;
+                cursor: pointer;
+                margin: 15px ;
+                transition: 0.2s ease;
+}
+
+.product1 .pro .des h5 {
+                        color: black;
+                        padding: none;
+                        font-size: 20px;
+}
+
+.product1 .pro .des h6 {
+                        color: green;
+                        font-size: 20px;
+}
+
+.product1 .pro .cart {
+                      width: 30px;
+                      height: 30px;
+                      line-height: 40px;
+                      background-color: white;
+                      font-weight: 500;
+                      color: cyan;
+                      border: 1px solid white;
+                      position: absolute;
+}
+
+.product3 .pro-container {
+      display: inline-block;
+      justify-content: space-between;
+      flex-wrap: wrap;
+}
+
+.product3 {
+      text-align: center;
+      font-size: xx-large;
+}
+
+.product3 .pro {
+      width: 200px;
+      height: 440px;
+      padding: 10px;
+      border: 2px solid black;
+      cursor: pointer;
+      margin: 15px ;
+      transition: 0.2s ease;
+}
+
+.product3 .pro .des h5 {
+              color: black;
+              padding: none;
+              font-size: 20px;
+}
+
+.product3 .pro .des h6 {
+              color: green;
+              font-size: 20px;
+}
+
+.poster {
+         text-align: center;
+         font-size: xx-large;
+         height: 510;
+         width: 1300;
+         color: white;
+         background-image: url(https://img.freepik.com/premium-photo/old-black-background-grunge-texture-dark-wallpaper-blackboard-chalkboard-room-wall_1258-28313.jpg);
+         padding-bottom: none;
+}
+
+.poster h3 {
+            font-size: x-large;
+            color: white;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.poster h2 {
+             font-size: xx-large;
+             color: palevioletred;
+}
+
+.poster button {
+                 font-size: x-large;
+                 background-color: rgb(225, 235, 243);
+                 color: black;
+                 border-radius: 30px;
+                 cursor: pointer;
+                 
+}
+
+.product2 {
+           text-align: center;
+           font-size: xx-large;
+}
+
+.product2 .pro {
+                width: 200px;
+                height: 440px;
+                padding: 10px;
+                border: 2px solid black;
+                cursor: pointer;
+                margin: 15px ;
+                transition: 0.2s ease;
+}
+
+.product2 .pro .des h5 {
+                        color: black;
+                        padding: none;
+                        font-size: 20px;
+}
+
+.product2 .pro .des h6 {
+                        color: green;
+                        font-size: 20px;
+}
+
+.product2 .pro-container {
+                          display: inline-block;
+                          justify-content: space-between;
+                          flex-wrap: wrap;                    
+
+}
+
+.sm-banner .banner-box {
+      background-image:url(https://artjewellerywatches.com/cdn/shop/articles/service.jpg?v=1707254518&width=1800);
+      height: 500px;
+      width: 630px;
+      padding-left: 20px;
+      background-position: center;
+      background-size: cover;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 5px;         
+}
+
+.sm-banner h5 {
+               color: rgb(0, 0, 0);
+               font-size: 32px;
+               font-family: cursive;
+
+}
+
+.sm-banner h2 {
+               color: yellow;
+               font-size: x-large;
+               font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.sm-banner button {
+                    background-color: lightskyblue;
+                    border: 1px solid black;
+                    border-radius: 20px;
+                    font-size: large;
+}
+
+.sm-banner {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+}
+
+.sm-banner .banner-box2 {
+      background-image: url(https://i.insider.com/61291ab29ef1e50018f86fed?width=1136&format=jpeg);
+      height: 500px;
+      width: 630px;
+      padding-left: 20px;
+      background-position: center;
+      background-size: cover;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 5px;    
+}
+
+.sm-banner .banner-box2 h2 {
+                        color: red;
+                        font-family: cursive;
+                        font-size: 26px;
+}
+
+.sm-banner .banner-box2 h5 {
+                            color: blue;
+                            font-family: monospace;
+                            text-align: start;
+                            font-size: 32px;
+}
+
+.sm-banner .banner-box2 button {
+                                background-color: white;
+                                color: black;
+                                border-radius: 5px;
+}
+
+.banner-boxes {
+          display: flex;
+          justify-content: space-between;
+          flex-wrap: wrap;
+          padding: 10px;       
+}
+
+.banner-box3 {
+      background-image: url(https://fashionker.pk/images/rolex-perpetual-datejust-watch-and-bracelet-combo1662980575.webp);
+      height: 400px;
+      width: 400px;
+      padding-left: 20px;
+      background-position: center;
+      background-size: cover;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 5px;    
+}
+
+.banner-box3 h2 {
+                 color: aliceblue;
+                 font-size: xx-large;
+                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                 text-align: start;
+}
+
+.banner-box3 h3 {
+                 color: lightgray;
+                 font-family: Verdana, Geneva, Tahoma, sans-serif;
+                 font-size: larger;
+
+}
+
+.banner-box4 {
+              background-image: url(https://firstcopyshop.com/wp-content/uploads/2024/01/First-copy-Unisex-Rolex-watch-3.jpeg);
+              height: 400px;
+              width: 400px;
+              padding-left: 20px;
+              background-position: center;
+              background-size: cover;
+              padding-left: 20px;
+              display: flex;
+              flex-direction: column;
+              align-items: flex-start;
+              justify-content: center;
+              margin: 5px;    
+}
+
+.banner-box4 h2 {
+                 color: rgb(245, 72, 106);
+                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                 text-align: start;
+                 font-size: xx-large;
+}
+
+.banner-box4 h3 {
+                 color: black;
+                 font-family: fantasy;
+                 font-size: x-large;
+}
+
+.banner-box5 {
+      background-image: url(https://5.imimg.com/data5/FK/VR/RE/ANDROID-64079611/product-jpeg-500x500.jpg);
+      height: 400px;
+      width: 400px;
+      padding-left: 20px;
+      background-position: center;
+      background-size: cover;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      margin: 5px;    
+}
+
+.banner-box5 h2 {
+                 color: darkcyan;
+                 font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                 font-size: xx-large;
+                 text-align: start;
+}
+
+.banner-box5 h3 {
+                 color: rgb(247, 247, 188);
+                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                 font-size: larger;
+
+
+}
+
+.newsletter {
+             display: flex;
+             justify-content: space-between;
+             flex-wrap: wrap;
+             align-items: center;
+             background-repeat: no-repeat;
+             background-position: fixed;
+             background-size: cover;
+             background-color: lightpink;
+             padding-left: 20px;
+             padding-right: 180px;
+             margin-top: 15px;
+}
+
+.newsletter h3 {
+                font-size: xx-large;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: black;
+}
+
+.newsletter p {
+               font-size: x-large;
+               color: crimson;
+               font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.newsletter p span {
+                   color: darkorange;
+}
+
+.newsletter input {
+                   height: 30px;
+                   padding: 5px;
+                   font-size: 10px;
+                   width: 100%;
+                   border: 2px solid transparent;
+                   border-radius: 8px;
+                   outline: none;
+}
+
+.newsletter button {
+                    background-color: palevioletred;
+                    color: black;
+                    font-size: larger;
+                    border: 2px solid black;
+                    border-radius: 90px;
+                    margin: 5px;
+                    padding: 5px;
+}
+
+footer {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+}
+
+footer {
+        border: 2px solid transparent;
+        margin: 5px;
+}
+
+footer .col {
+             display: flex;
+             flex-direction: column;
+             align-items: normal;
+             margin-bottom: 10px;
+}
+
+footer .col h3 {
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                font-size: x-large;
+}
+
+footer .col a {
+               color: black;
+               font-size: larger;
+               padding-bottom: 10px;
+}
+
+footer .colinstall {
+                    padding-left: 50px;
+}
+
+footer p {
+           font-size: large;
+}
+
+.page-header {
+              background-image: url(https://i.pinimg.com/736x/08/1a/ed/081aed2e7ddc029f940021ddb22145fc.jpg);
+              height: 300px;
+              
+}
+
+.page-header h2 {
+                 text-align: center;
+                 padding-top: 70px;
+                 font-size: xx-large;
+                 font-family: cursive;
+                 color: red;
+}
+
+.page-header p {
+                text-align: center;
+                font-size: xx-large;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.pagination {
+             text-align: center;
+}
+
+.pagination a {
+               text-decoration: none;
+               background-color: lightpink;
+               color: rgb(5, 3, 3);
+               padding: 8px;
+               font-size: x-large;
+               margin: 3px;
+}
+
+.pagination a i {
+                 font-size: x-large;            
+}
+
+/* Single Product */
+.prodetails {
+             display: flex;
+             margin-top: 10px;
+}
+
+.prodetails .single-pro-image {
+                           width: 200px;
+                           margin-right: 50px;
+                           margin-top: 10px;
+}
+
+.small-img-group {
+                  display: flex;
+                  justify-content: space-between;
+}
+
+.small-img-col {
+                flex-basis: 24%;
+                cursor: pointer;
+                padding: 3px;
+}
+
+.prodetails .single-pro-details {
+                                 padding-left: 300px;
+                                 width: 50%;
+}
+
+.prodetails .single-pro-details h4 {
+                                    font-size: xx-large;
+                                    margin-top: 10px;
+}
+
+.prodetails .single-pro-details select {
+                                        display: block;
+                                        padding: 8px;
+                                        margin-bottom: 5px;
+}
+
+.prodetails .single-pro-details input {
+                                       width: 50px;
+                                       height: 40px;
+                                       padding-left: 10px;
+                                       font-size: larger;
+                                       margin-right: 10px;
+                                       margin-bottom: 8px;
+                                    
+}
+
+.prodetails .single-pro-details button {
+                                        background-color: lightpink;
+                                        color: black;
+                                        font-size: larger;
+}
+
+.prodetails .single-pro-details span {
+                                      line-height: 25px;
+}
+
+.page-header .discount-header h2 {
+                                  color: black;
+                                  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+                                  font-size: xx-large;
+}
+
+.page-header .discount-header p {
+                                 color: brown;
+                                 font-family: cursive;
+                                 font-size: xx-large;
+}
+
+.about-header {
+               background-image: url();
+               height: 300px;
+}
+
+.about-header h2 {
+                  color: crimson;
+                  font-size: xx-large;
+                  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.about-header p {
+                 font-size: x-large;
+}
+
+.about-head img {
+                 height: 400px;
+                 width: 390px;
+                 margin-top: 10px;
+                 margin-left: 50px;
+}
+
+.about-head .section-p1 {
+                         display: flex;
+                         align-items: center;
+}
+
+.about-head .section-p1 div {
+                             margin-left: 50px;
+}
+
+.about-head .section-p1 h1 { 
+                             color: rgb(226, 11, 11);
+                             font-family: Arial, Helvetica, sans-serif;               
+}
+
+.about-head .section-p1 abbr {
+                              font-size: larger;
+}
+
+.about-head .section-p1 marquee {
+                                 font-size: large;
+                                 margin-top: 5px;
+}
+
+.favourite-header {
+                   background-image: url(https://i.pinimg.com/736x/08/1a/ed/081aed2e7ddc029f940021ddb22145fc.jpg);
+                   height: 300px;
+                   text-align: center;
+}
+
+.favourite-header h2 {
+                      color: rgb(1, 1, 32);
+                      font-size: xx-large;
+                      padding-top: 80px;
+                      font-family: cursive;
+}
+
+.favourite-header p {
+                     font-size: xx-large;
+                     color: deeppink;
+}
+
+.about-app .section-p1 {
+                       text-align: center;
+                       margin-top: 20px;
+}
+
+.about-app .section-p1 a {
+                          color: red;
+}
+
+.about-app .section-p1 h1 {
+                           font-size: 40px;
+                           font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.contact-header h2 {
+                    color: darkblue;
+                    font-size: 45px;
+                    font-family: sans-serif;
+}
+
+.contact-header p {
+                   font-size: x-large;
+                   color: black;
+}
+
+/* contact page*/
+#contact-details {
+                  display: flex;
+                  align-items: center;
+                  justify-content: space-between;
+}
+
+#contact-details .details {
+                           width: 40%;
+}
+
+#contact-details .details span {
+                                font-size: x-large;
+                                line-height: 35px;
+                                padding: 10px;
+                                color: red;
+                                margin-top: 10px;
+                                margin-left: 3px;
+}
+
+#contact-details .details h2 {
+                              font-size: xx-large;
+                              line-height: 30px;
+                              padding: 10px;
+                              margin-left: 3px;
+}
+
+#contact-details .details h3 {
+                              font-size: 23px;
+                              line-height: 30px;
+                              padding: 10px;
+                              margin-left: 3px;
+}
+
+#contact-details .details li {
+                              list-style: none;
+                              display: flex;
+                              font-size: 20px;
+                              padding: 10px 0;
+                              margin-left: 3px;
+}
+
+#contact-details .details li i {
+                                font-size: 20px;
+                                padding-right: 22px;
+                                margin-left: 3px;
+}
+
+#contact-details .details li p {
+                                margin: 0;
+                                font-size: 20px;
+                                margin-left: 3px;
+}
+
+#contact-details .map iframe {
+                              margin-top: 18px;
+                              margin-right: 70px;
+}
+
+.form-details form {
+                    width: 60%;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-start;
+}
+
+.form-details span {
+                    font-size: x-large;
+                    color: black;
+                    margin-left: 3px;
+                    margin-top: 80px;
+                    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.form-details h2 {
+                  font-size: xx-large;
+                  margin-left: 3px;
+}
+
+.form-details form input, 
+.form-details form textarea {
+                          width: 100%;
+                          padding: 12px 15px;
+                          outline: none;
+                          margin-bottom: 15px;
+                          border: 2px white;
+}
+
+.form-details button {
+                      font-size: x-large;
+                      background-color: lightpink;
+                      color: rgb(3, 0, 0);
+                      border-radius: 10px;
+                      padding: 5px;
+}
+
+.cart-header {
+              background-image: url(https://i.pinimg.com/736x/08/1a/ed/081aed2e7ddc029f940021ddb22145fc.jpg);
+              height: 250px;
+              text-align: center;
+}
+
+.cart-header h1 {
+                 font-size: 55px;
+                 font-family: cursive;
+                 color: palevioletred;
+                 margin-top: 20px;
+                 padding-top: 70px;
+}
+
+/* cart page */
+#cart table {
+             width: 90%;
+             border-collapse: collapse;
+             table-layout: fixed;
+             white-space: nowrap;
+             white-space: normal;
+             margin-top: 24px;
+             /*margin-left: 50px;*/
+             margin-bottom: 10px;
+}
+
+#cart table thead tr {
+                      font-size: 30px;
+}
+
+#cart table td:nth-child(5) input {
+                                   width: 20%;
+                                   padding: 10px 5px 10px 15px;
+}
+
+#cart table img {
+                 margin-top: 8px;
+}
+
+#cart table tbody tr {
+                       font-size: 17px;
+}
+
+#cart-add {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;
+}
+
+.coupon {
+         width: 50%;
+         margin-bottom: 30px;
+         margin-left: 10px;
+}
+
+.coupon h2 {
+            padding-bottom: 5px;
+            color: red;
+            font-size: 30px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin-top: 50px;
+}
+
+.coupon input {
+               padding: 10px 20px;
+               outline: none;
+               width: 60%;
+               margin-right: 10px;
+               border: 1px solid snow;
+}
+
+.coupon button {
+                background-color: lightpink;
+                color: black;
+                outline: none;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                font-size: large;
+                padding: 5px;
+}
+
+#subtotal {
+           margin-right: 200px;
+           border: 2px solid rgb(167, 165, 163);
+           width: 24%;
+           height: 20%;
+           padding: 27px;
+           margin-top: 40px;
+}
+
+#subtotal h2 {
+              font-size: xx-large;
+              color: darkgreen;
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#subtotal table tr {
+                    font-size: 27px;
+}
+
+#subtotal button { 
+      background-color: gainsboro;
+      color: black;
+      outline: none;
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      font-size: 13px;
+      padding: 5px;
+      margin-top: 5px;   
+}
+
+/* Media Query for responsivness */
+/*Contact Page*/
+@media (max-width:500px) {
+#contact-details .details {
+                           flex-direction: column;
+                           width: 90%;
+}
+#contact-details .map iframe {
+                               flex-direction: column;
+                               width: 92%;
+                               margin-left: 4px;
+                               height: 515px;
+}
+  
+/*Cart Page*/
+#cart table {
+             width: 100%;
+             margin-bottom: 1px;
+}
+#cart table thead tr {
+                      font-size: 18px;
+} 
+#cart table tbody img {
+                       margin-left: 1px;
+                       width: 74%;
+}
+#subtotal {
+           width: 45%;
+           margin-bottom: 10px;
+}
+#cart-add .coupon button {
+                  margin-top: 7px;
+}
+#cart-add .coupon input {
+               width: 70%;
+               height: 30px;
+               padding: 10px 10px;
+               outline: #0e0c0c;
+               
+}
+}
+
+
+
+
+

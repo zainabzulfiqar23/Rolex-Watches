@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Information</title>
+    <style>
+        form {
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter Your Information</h1>
+    <form id="user-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required><br><br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" required><br><br>
+        <label for="address">Address:</label>
+        <input type="text" id="address" required><br><br>
+        <button type="submit">Save Information</button>
+    </form>
+
+
+<style>
+h1 {
+    font-size: 40px;
+}    
+
+button {
+        font-size: larger;
+        padding: 5px;
+}
+</style>
+
+
+    <script>
+        // Handle form submission to save user info to localStorage
+        const userForm = document.getElementById('user-form');
+        userForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            // Capture user data
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const address = document.getElementById('address').value;
+
+            // Save to localStorage
+            const userInfo = { name, email, address };
+            localStorage.setItem('user', JSON.stringify(userInfo));
+
+            alert('User info saved!');
+
+            // Redirect to product page
+            window.location.href = 'checkout.html';
+        });
+    </script>
+
+    
+</body>
+</html>
+

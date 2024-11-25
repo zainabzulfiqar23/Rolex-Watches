@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product List</title>
+    <style>
+        .product {
+            margin-bottom: 20px;
+        }
+        .cart-button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        .cart {
+            margin-top: 20px;
+        }
+        .remove-button {
+            color: red;
+            cursor: pointer;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Product List</h1>
+
+    <!-- Products -->
+    <div class="product" data-id="1" data-name="Product 1" data-price="50.00">
+        <img src="https://5.imimg.com/data5/ANDROID/Default/2021/2/AY/JK/KI/93645587/product-jpeg-500x500.jpg" alt="" height="250px" width="250px">
+       <div class="des">
+       <h4>Rolex Leather Couple</h4>     
+       </div>
+       <button class="cart-button">Add to Cart</button>
+       </div>
+
+    <div class="cart">
+        <h2>Your Cart</h2>
+        <ul id="cart-items"></ul>
+        <p>Total: $<span id="total-price">0.00</span></p>
+        <button onclick="window.location.href='checkout.html'">Proceed to Checkout</button>
+    </div>
+
+    <script>
+        // Initialize cart data in localStorage if not set
+        if (!localStorage.getItem('cart')) {
+            localStorage.setItem('cart', JSON.stringify([]));
+        }
+
+        // Get product buttons and cart elements
+        const addToCartButtons = document.querySelectorAll('.cart-button');
+        const cartItemsList = document.getElementById('cart-items');
+        const totalPriceDisplay = document.getElementById('total-price');
+
+        // Function to update cart display
+        function updateCart() {
+            const cart = JSON.parse(localStorage.getItem('cart'));
+            cartItemsList.innerHTML = ''; // Clear the cart items list
+            let total = 0;
+
+            cart.forEach((item, index) => {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${item.name} - $${item.price}`;
+                const removeButton = document.createElement('span');
+                removeButton.textContent = " (Remove)";
+                removeButton.classList.add('remove-button');
+                removeButton.setAttribute('data-index', index);
+                removeButton.addEventListener('click', removeFromCart);
+
+                listItem.appendChild(removeButton);
+                cartItemsList.appendChild(listItem);
+                total += item.price;
+            });
+
+            totalPriceDisplay.textContent = total.toFixed(2);
+        }
+
+        // Function to add product to cart
+        function addToCart(event) {
+            const productElement = event.target.closest('.product');
+            const id = productElement.dataset.id;
+            const name = productElement.dataset.name;
+            const price = parseFloat(productElement.dataset.price);
+
+            // Add product to the cart in localStorage
+            const cart = JSON.parse(localStorage.getItem('cart'));
+            cart.push({ id, name, price });
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Update cart display
+            updateCart();
+        }
+
+        // Function to remove product from cart
+        function removeFromCart(event) {
+            const index = event.target.getAttribute('data-index');
+            const cart = JSON.parse(localStorage.getItem('cart'));
+
+            // Remove the item from the cart at the specified index
+            cart.splice(index, 1);
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Update cart display
+            updateCart();
+        }
+
+        // Attach event listeners to "Add to Cart" buttons
+        addToCartButtons.forEach(button => {
+            button.addEventListener('click', addToCart);
+        });
+
+        // Update cart display on page load
+        updateCart();
+    </script>
+
+
+
+</body>
+</html>

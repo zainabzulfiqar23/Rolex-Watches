@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Cart List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h1>Your Shopping Cart</h1>
+    <div id="cart-items"></div>
+    <p>Total: $<span id="total-price">0</span></p>
+    <button id="clear-cart">Clear Cart</button>
+    <a href="index3.html"><button id="checkout-btn">Proceed to Checkout</button></a>
+    
+    <a href="Cart.html">Back to Products</a>
+
+    
+<style>
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product {
+    text-align: center;
+    border: 1px solid #ddd;
+    padding: 10px;
+    width: 150px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 5px 10px;
+    border: none;
+    cursor: pointer;
+    font-size: large;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+#cart-items {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.cart-item button {
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-item button:hover {
+    background-color: darkred;
+}
+
+#checkout-btn {
+    background-color: lightpink;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 19px;
+    border: 1px solid black;
+
+}
+
+#checkout-btn:hover {
+    background-color: rgb(245, 100, 129);
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    font-size: larger;
+}
+
+</style>
+
+
+<script>
+// cart.js
+document.addEventListener('DOMContentLoaded', () => {
+    // Get cart data from localStorage
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById('cart-items');
+    const totalPriceElement = document.getElementById('total-price');
+
+    // Display cart items
+    let totalPrice = 0;
+    cart.forEach((item, index) => {
+        const cartItemDiv = document.createElement('div');
+        cartItemDiv.classList.add('cart-item');
+        cartItemDiv.innerHTML = `
+            <span>${item.name} - $${item.price}</span>
+            <button onclick="removeFromCart(${index})">Remove</button>
+        `;
+        cartItemsContainer.appendChild(cartItemDiv);
+        totalPrice += item.price;
+    });
+
+    // Display total price
+    totalPriceElement.textContent = totalPrice.toFixed(2);
+});
+
+// Function to remove an item from the cart
+function removeFromCart(index) {
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.splice(index, 1); // Remove item at specified index
+    localStorage.setItem('cart', JSON.stringify(cart));
+
+    // Reload the cart page to reflect changes
+    location.reload();
+}
+
+// Clear all items from the cart
+document.getElementById('clear-cart').addEventListener('click', () => {
+    localStorage.removeItem('cart');
+    location.reload();
+});
+
+</script>
+
+
+
+
+
+</body>
+</html>

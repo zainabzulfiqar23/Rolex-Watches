@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+</head>
+<body>
+
+    <h1>Checkout</h1>
+
+    <h2>User Information</h2>
+    <p id="user-info"></p>
+
+    <h2>Your Cart</h2>
+    <ul id="cart-items"></ul>
+    <p>Total: $<span id="total-price">0.00</span></p>
+
+    <button onclick="alert('Thank you for your order!')">Confirm Order</button>
+
+
+<style>
+h1 {
+     font-size: 45px;
+     font-family: cursive;
+}  
+
+h2 {
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+span { 
+    color: red;
+}
+
+button {
+        font-size: larger;
+        padding: 5px;
+}
+
+</style>
+
+
+    <script>
+        // Load user info from localStorage
+        const userInfo = JSON.parse(localStorage.getItem('user'));
+        const userInfoElement = document.getElementById('user-info');
+        if (userInfo) {
+            userInfoElement.textContent = `Name: ${userInfo.name}, Email: ${userInfo.email}, Address: ${userInfo.address}`;
+        } else {
+            userInfoElement.textContent = 'User information not found!';
+        }
+
+        // Load cart items from localStorage
+        const cartItemsList = document.getElementById('cart-items');
+        const totalPriceDisplay = document.getElementById('total-price');
+        const cart = JSON.parse(localStorage.getItem('cart'));
+
+        // Display cart items and calculate total price
+        let total = 0;
+        cart.forEach(item => {
+            const listItem = document.createElement('li');
+            listItem.textContent = `${item.name} - $${item.price}`;
+            cartItemsList.appendChild(listItem);
+            total += item.price;
+        });
+        totalPriceDisplay.textContent = total.toFixed(2);
+    </script>
+
+</body>
+</html>
